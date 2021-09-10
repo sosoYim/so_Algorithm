@@ -18,5 +18,23 @@ function solution(nums) {
   return answer;
 }
 
+//set 사용법!!!
+function solution2(nums) {
+  let answer = 0;
+
+  //주어진 포켓몬의 종류를 알아내기 위해 set으로 거른다
+  const kind = [...new Set(nums)];
+
+  const poketNum = parseInt(nums.length / 2);
+
+  if (poketNum > kind.length) {
+    answer = kind.length;
+  } else {
+    answer = poketNum;
+  }
+  return answer;
+}
+
 // console.log(solution([3, 1, 2, 3]));
 console.log(solution([3, 3, 3, 2, 2, 2]));
+console.log(solution2([3, 3, 3, 2, 2, 2]));
