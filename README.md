@@ -6,15 +6,17 @@ Algorithm everyday
 
 1단계 문제들을 풀며 기본 알고리즘 유형, js 주요 내장 함수들에 익숙해지기 위한 스터디
 
+- [유형 없음 / 프로그래머스 / 완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)
+
 ## 알고리즘 레벨업 스터디
 
 난이도 (조금)있는 문제를 풀고 풀이 방법을 공유하는(배우는) 스터디
 
+- [플로이드 와샬 / 프로그래머스 / 배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
+
 ## 기초 유형 표본
 
 ### 이진탐색
-
-- min heap, max heap
 
 ### 슬라이팅 윈도우
 
@@ -24,7 +26,10 @@ Algorithm everyday
 
 ### 트리 DP
 
-### Dikstra
+### 최단거리
+
+- Dikstra + min heap
+- Floyd Warshall
 
 ### DP
 
