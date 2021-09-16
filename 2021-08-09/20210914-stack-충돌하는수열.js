@@ -28,29 +28,27 @@ N길이의 음수와 양수로 이루어진 수열이 주어집니다. 음수의
 
 function solution(nums) {
   const answer = [];
-  let flag = true;
-  while (flag) {
-    // ?? 값비교 해주기 answer값들 복사
-    while (nums.length > 0) {
-      // console.log(nums);
-      // console.log(answer);
-      //nums 에서 비교할 값
-      if (answer.length === 0) answer.push(nums.shift());
-      else {
-        //안 부딪힐 때까지
-        let pick = nums.shift();
-        let comp = answer.pop();
-        // console.log(`${pick} : ${comp} 비교 시작`);
-        if (!(comp > 0 && pick < 0)) {
-          answer.push(comp);
-          answer.push(pick);
-        } else if (comp + pick < 0) answer.push(pick);
-        else if (comp + pick > 0) {
-          answer.push(comp);
-        }
-        // console.log(`plus ${comp + comp}`);
-        // console.log(`comp ${pick} while ${answer} : ${nums}`);
+
+  // ?? 값비교 해주기 answer값들 복사
+  while (nums.length > 0) {
+    // console.log(nums);
+    // console.log(answer);
+    //nums 에서 비교할 값
+    if (answer.length === 0) answer.push(nums.shift());
+    else {
+      //안 부딪힐 때까지
+      let pick = nums.shift();
+      let comp = answer.pop();
+      // console.log(`${pick} : ${comp} 비교 시작`);
+      if (!(comp > 0 && pick < 0)) {
+        answer.push(comp);
+        answer.push(pick);
+      } else if (comp + pick < 0) answer.push(pick);
+      else if (comp + pick > 0) {
+        answer.push(comp);
       }
+      // console.log(`plus ${comp + comp}`);
+      // console.log(`comp ${pick} while ${answer} : ${nums}`);
     }
   }
   return answer;
