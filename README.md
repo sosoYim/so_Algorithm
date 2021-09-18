@@ -16,6 +16,10 @@ Algorithm everyday
 
 ## 기초 유형 표본
 
+### DFS/BFS
+
+- [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)
+
 ### 이진탐색
 
 ### 슬라이팅 윈도우
