@@ -5,7 +5,46 @@
 //board에서 체크한 토마토는 1로 바꿔준다.
 //다 돌고난 후 0이 있는지 체크 : 있으면 -1 반환
 
-function solution(board) {}
+function solution(board) {
+  let answer = 0;
+  const queue = [];
+  const row = board.length;
+  const col = board[0].length;
+  const dx = [-1, 0, 1, 0];
+  const dy = [0, 1, 0, -1];
+  const dist = Array.from(Array(row), () => Array(col).fill(0));
+
+  function BFS() {
+    while (queue.length) {
+      const cur = queue.shift();
+      for (let i = 0; i < 4; i++) {
+        const x = cur[0] + dx[i];
+        const y = cur[1] + dy[i];
+        if (x >= 0 && x < row && y >= 0 && y < col && board[x][y] === 0) {
+          board[x][y] = 1;
+          dist[x][y] = dist[cur[0]][cur[1]] + 1;
+          queue.push([x, y]);
+          answer = Math.max(dist[x][y], answer);
+        }
+      }
+    }
+  }
+
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      if (board[i][j] === 1) queue.push([i, j]);
+    }
+  }
+
+  BFS();
+
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      if (board[i][j] === 0) answer = -1;
+    }
+  }
+  return answer;
+}
 
 console.log(
   solution([

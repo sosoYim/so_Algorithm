@@ -19,6 +19,7 @@ Algorithm everyday
 ### DFS/BFS
 
 - [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)
+- [게임맵 최단거리](https://programmers.co.kr/learn/courses/30/lessons/1844)
 
 ### 이진탐색
 
