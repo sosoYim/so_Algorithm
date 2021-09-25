@@ -20,6 +20,7 @@ Algorithm everyday
 
 - [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)
 - [게임맵 최단거리](https://programmers.co.kr/learn/courses/30/lessons/1844)
+- [단어변환](https://programmers.co.kr/learn/courses/30/lessons/43163)
 
 ### 이진탐색
 
