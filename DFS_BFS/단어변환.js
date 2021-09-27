@@ -18,7 +18,7 @@ function solution(begin, target, words) {
   // 비교 후보 q 에 넣기
   while (q.length) {
     const [word, lev] = q.shift();
-    // console.log(`${word} : ${lev}`);
+    // console.log(`${word} : ${lev} 비교 시작 ===>`);
     if (word === target) {
       return lev; //타겟 단어 발견시 레벨 return
     }
