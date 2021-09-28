@@ -16,7 +16,7 @@ function solution(bridge_length, weight, truck_weights) {
     }
 
     //지금 다리 위의 무게(ing_w) + 첫번째 트럭의 무게 < 한계
-    //다리에 트럭이 올라가고, 현재 다리 위의 무게 더하기, 현재 다리 위에 있는 트럭의 배열에 추가
+    //다리에 트럭이 올라가고 현재 다리 위의 무게 더하기, 현재 다리 위에 있는 트럭의 배열에 추가
     if (ing_w + truck_weights[0] <= weight) {
       let truck = truck_weights.shift();
       ing_w += truck;

@@ -41,3 +41,9 @@ Algorithm everyday
 ### 스택/큐
 
 [다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583)
+
+---
+
+## 기본 유형 복습
+
+### [1, 2차원 배열탐색과 시뮬레이션]

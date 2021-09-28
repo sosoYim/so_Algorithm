@@ -12,3 +12,22 @@
 ▣ 반환값 형식 1
 [1, 0, 3, 2]
 */
+
+function solution(nums) {
+  const result = nums.map((row, i) => ({
+    i,
+    cnt: row.reduce((acc, v) => (acc += v), 0),
+  }));
+  result.sort((a, b) => b.cnt - a.cnt);
+
+  return result.map((_, i) => i);
+}
+
+console.log(
+  solution([
+    [1, 0, 0, 1],
+    [0, 0, 0, 1],
+    [1, 1, 0, 1],
+    [0, 1, 0, 1],
+  ])
+);
