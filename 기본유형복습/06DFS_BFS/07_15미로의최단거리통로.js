@@ -22,3 +22,41 @@
 ▣ 출력예제 1
 12
 */
+
+function solution(board) {
+  const dx = [-1, 0, 1, 0];
+  const dy = [0, 1, 0, -1];
+  const dist = Array.from({ length: board.length }, () => Array(board.length).fill(0));
+
+  function BFS(x, y) {
+    let q = [];
+    q.push([x, y]);
+    while (q.length) {
+      const [curX, curY] = q.shift();
+      for (let i = 0; i < 4; i++) {
+        const nX = curX + dx[i];
+        const nY = curY + dy[i];
+        if (nX >= 0 && nY >= 0 && nX < 7 && nY < 7 && board[nX][nY] === 0) {
+          board[nX][nY] = 1;
+          q.push([nX, nY]);
+          dist[nX][nY] = dist[curX][curY] + 1;
+        }
+      }
+    }
+  }
+  BFS(0, 0);
+
+  return dist[6][6] === 0 ? -1 : dist[6][6];
+}
+
+console.log(
+  solution([
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 1, 1, 0],
+    [0, 0, 0, 1, 0, 0, 0],
+    [1, 1, 0, 1, 0, 1, 1],
+    [1, 1, 0, 1, 0, 0, 0],
+    [1, 0, 0, 0, 1, 0, 0],
+    [1, 0, 1, 0, 0, 0, 0],
+  ])
+);

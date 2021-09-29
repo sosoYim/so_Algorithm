@@ -22,6 +22,12 @@ edges 배열의 각 행은 다리에 대한 정보를 나타내는 세 자연수
 3
 */
 
+/*
+각 노드별 가중치 -> 인접그래프
+최대무게를 정하자 -> lt, rt 
+mid 무게로 지나갈 수 있나? -> BFS
+*/
+
 function solution(N, edges, s, e) {
   // 최대 무게 구하기
   let answer = 0;
