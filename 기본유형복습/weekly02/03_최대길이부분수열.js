@@ -17,19 +17,53 @@
 8
 */
 
+// function solution(nums, k) {
+//   let answer = 0,
+//     lt = 0,
+//     cnt = 0;
+//   for (let rt = 0; rt < nums.length; rt++) {
+//     if (nums[rt] === 0) cnt++;
+//     while (cnt > k) {
+//       if (nums[lt] === 0) cnt--;
+//       lt++;
+//     }
+//     answer = Math.max(answer, rt - lt + 1);
+//   }
+//   return answer;
+// }
+
 function solution(nums, k) {
-  let answer = 0,
-    lt = 0,
-    cnt = 0;
-  for (let rt = 0; rt < nums.length; rt++) {
-    if (nums[rt] === 0) cnt++;
-    while (cnt > k) {
-      if (nums[lt] === 0) cnt--;
-      lt++;
-    }
-    answer = Math.max(answer, rt - lt + 1);
+  let answer = 0;
+
+  // 0을 기준으로 1의 갯수(cnt)를 센 tmp 배열 만들기
+  let cnt = 0;
+  const tmp = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === 0 || i === nums.length - 1) {
+      tmp.push(cnt);
+      cnt = 0;
+    } else cnt++;
   }
-  return answer;
+
+  console.log(tmp);
+  // k+1 길이 만큼 윈도우로 잡고 합을 구하여 가장 큰 구역을 찾는다
+  // 최초 윈도우 값 구하고 answer에 넣기
+  let sum = 0;
+  for (let i = 0; i <= k; i++) {
+    sum += tmp[i];
+  }
+  answer = sum;
+
+  // 윈도우 슬라이딩 시작
+  let lt = 0;
+  for (let rt = k + 1; rt < tmp.length; rt++) {
+    let comp = sum - tmp[lt] + tmp[rt];
+    lt += 1;
+    answer = Math.max(answer, comp);
+  }
+
+  // 반환값은 최대값 + k(1로 변환된 0의 길이)
+  return answer + k;
 }
 
 console.log(solution([1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1], 2));
