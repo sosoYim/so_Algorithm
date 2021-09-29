@@ -6,6 +6,32 @@
 
 function solution(board) {
   let answer = 0;
+  const dx = [-1, -1, 0, 1, 1, 1, 0, -1];
+  const dy = [0, 1, 1, 1, 0, -1, 0, -1];
+
+  // 연결된 모든 육지를 바다로 바꿔버리는 DFS
+  function DFS(x, y) {
+    // 다음에 못지나가게 0으로 바꿔준 다음
+    board[x][y] = 0;
+    //주위에 연결된 육지가 있는지 살펴본다
+    for (let i = 0; i < 8; i++) {
+      const nX = x + dx[i];
+      const nY = y + dy[i];
+      if (nX >= 0 && nY >= 0 && nX < board.length && nY < board[0].length && board[nX][nY] === 1) {
+        DFS(nX, nY);
+      }
+    }
+  }
+
+  for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board[0].length; j++) {
+      if (board[i][j] === 1) {
+        answer++;
+        DFS(i, j);
+      }
+    }
+  }
+
   return answer;
 }
 

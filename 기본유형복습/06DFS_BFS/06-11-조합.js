@@ -4,8 +4,9 @@
 function solution(n, m) {
   const answer = [];
   const part = [];
+
   function DFS(L, s) {
-    if (L === m) answer.push(part.slice());
+    if (L === m) answer.push([...part]);
     else {
       for (let i = s; i < n + 1; i++) {
         part.push(i);
@@ -15,6 +16,7 @@ function solution(n, m) {
     }
   }
   DFS(0, 1);
+
   return answer;
 }
 

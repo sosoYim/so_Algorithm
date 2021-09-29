@@ -1,21 +1,35 @@
 // [REPEAT CK] : 1
 
+// function solution(nums, c) {
+//   let answer = 0;
+//   const total = nums.reduce((a, b) => a + b, 0);
+//   function DFS(L, sum, tsum) {
+//     // 총합과 비교, tsum과 비요 두 조건을 || 연산자로 같이 두면 0.251sec
+//     // 따로 두개 주면 0.205sec
+//     // 총합 조건 하나만 두면 0.208sec
+//     if (sum > c) return;
+//     if (sum + (total - tsum) < answer) return;
+//     if (L === nums.length) answer = Math.max(sum, answer);
+//     else {
+//       DFS(L + 1, sum + nums[L], tsum + nums[L]);
+//       DFS(L + 1, sum, tsum + nums[L]);
+//     }
+//   }
+//   DFS(0, 0, 0);
+//   return answer;
+// }
+
 function solution(nums, c) {
   let answer = 0;
-  const total = nums.reduce((a, b) => a + b, 0);
-  function DFS(L, sum, tsum) {
-    // 총합과 비교, tsum과 비요 두 조건을 || 연산자로 같이 두면 0.251sec
-    // 따로 두개 주면 0.205sec
-    // 총합 조건 하나만 두면 0.208sec
+  function DFS(L, sum) {
     if (sum > c) return;
-    if (sum + (total - tsum) < answer) return;
-    if (L === nums.length) answer = Math.max(sum, answer);
+    if (L === nums.length) answer = Math.max(answer, sum);
     else {
-      DFS(L + 1, sum + nums[L], tsum + nums[L]);
-      DFS(L + 1, sum, tsum + nums[L]);
+      DFS(L + 1, sum);
+      DFS(L + 1, sum + nums[L]);
     }
   }
-  DFS(0, 0, 0);
+  DFS(0, 0);
   return answer;
 }
 
