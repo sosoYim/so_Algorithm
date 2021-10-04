@@ -11,7 +11,6 @@ const Stack = (function () {
     // 스택의 가장 마지막에 밀어 넣기
     push(...args) {
       //return this.array.push(value);
-      // return (this.array[this.array.length] = value);
       this.array = [...this.array, ...args];
       return this.array;
     },

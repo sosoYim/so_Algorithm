@@ -110,3 +110,16 @@ function solution(s, e) {
 }
 console.log(solution(1, 11));
 // console.log(solution(10, 3));
+
+//
+
+function newFilter(callback, thisArg) {
+  let newArray = [];
+
+  for (var i = 0; i < this.length; i++) {
+    newArray = callback.call(thisArg, this[i], i, this) ? [...newArray, this[i]] : newArray;
+  }
+  return newArray;
+}
+
+console.log([1, 2, 3].newFilter(v => v));
