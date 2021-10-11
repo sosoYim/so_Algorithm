@@ -4,7 +4,7 @@ function solution(n, m) {
   let ch = Array.from({ length: n + 1 }, () => 0);
   function DFS(L) {
     if (L === m) {
-      answer.push(tmp.slice()); //deep copy
+      answer.push(...tmp); //deep copy
     } else {
       for (let i = 1; i <= n; i++) {
         if (ch[i] === 0) {
