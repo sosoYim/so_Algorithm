@@ -18,6 +18,7 @@ Algorithm everyday
 [500. Keyboard row](https://leetcode.com/problems/keyboard-row/) (21/10/28) (hash)
 [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
 [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888?language=javascript) (21/11/01)
+[kko 위장](https://programmers.co.kr/learn/courses/30/lessons/42578) (21/11/10)
 
 ### DFS/BFS
 
@@ -33,6 +34,13 @@ Algorithm everyday
 [뉴스클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677)
 [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) (21/10/28 easy인데 어려움)
+[kko3차 n진수 게임]()
+
+- 꼭 풀어보기(2021/11/11 문제풀이 강의)
+  [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
+  [합승택시(플로이드와샬)](https://programmers.co.kr/learn/courses/30/lessons/72413)
+  [93.Restore IP Adredd](https://leetcode.com/problems/restore-ip-addresses/)
+  [백준2042. 구간 합 구하기](https://www.acmicpc.net/problem/2042)
 
 ## 아하
 

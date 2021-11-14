@@ -1,0 +1,40 @@
+function solution(board, nums){
+    let answer=0, sum=0, num, s1, s2, s3, s4;
+    let pos=Array.from(Array(2), ()=>Array(30).fill(0)); 
+    let ch=Array.from(Array(5), ()=>Array(5).fill(0));
+    for(let i=0; i<5; i++){
+        for(let j=0; j<5; j++){
+            num=board[i][j];
+            pos[0][num]=i;
+            pos[1][num]=j;
+        }
+    }
+    for(let j=0; j<nums.length; j++){
+        let x = nums[j];
+        ch[pos[0][x]][pos[1][x]]=1;
+        s1=s2=s3=s4=1;
+        if(pos[0][x]===pos[1][x]){
+            for(let i=0; i<5; i++){
+                if(ch[i][i]===0) s1=0;
+            }
+        }
+        else s1=0;
+        if(pos[0][x]+pos[1][x]===4){
+            for(let i=0; i<5; i++){
+                if(ch[i][4-i]===0) s2=0;
+            }
+        }
+        else s2=0;
+        for(let i=0; i<5; i++){
+            if(ch[pos[0][x]][i]===0) s3=0;
+            if(ch[i][pos[1][x]]===0) s4=0;
+        }
+        sum+=(s1+s2+s3+s4);
+        if(sum>=3){
+            answer=j+1;
+            break;
+        }
+    }
+    return answer;
+}
+console.log(solution([[11, 12, 2, 24, 10], [16, 1, 13, 3, 25], [6, 20, 5, 21, 17], [19, 4, 8, 14, 9], [22, 15, 7, 23, 18]], [5, 10, 7, 16, 2, 4, 22, 8, 17, 13, 3, 18, 1, 6, 25, 12, 19, 23, 14, 21, 11, 24, 9, 20, 15])); //15
