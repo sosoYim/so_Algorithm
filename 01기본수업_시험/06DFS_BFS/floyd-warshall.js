@@ -34,6 +34,7 @@ function floydWarchall(N, road, h) {
     }
   }
 
+  console.log(graph[1]);
   // 4. 결과 (문제에 따라)
   return graph[1].filter(el => el <= h).length;
 }
