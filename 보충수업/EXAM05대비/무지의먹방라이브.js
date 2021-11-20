@@ -1,5 +1,5 @@
 // https://programmers.co.kr/learn/courses/30/lessons/42891
-// TODO: 완변한 것 같은데 정확도가 와장창 깨짐.... 뭐가 문제지
+// TODO: 완벽한 것 같은데 정확도가 와장창 깨짐.... 뭐가 문제지
 
 function solution(food_times, k) {
   food_times.unshift(0);
@@ -26,3 +26,4 @@ function solution(food_times, k) {
 // console.log(solution([3, 1, 2], 5)); // 1
 console.log(solution([3, 1, 2], 0)); // 1
 console.log(solution([2, 2, 2], 4)); // 2
+console.log(solution([1], 1)); // 2
