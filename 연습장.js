@@ -1,37 +1,24 @@
-function solution(N, road, h) {
-  const INF = 1e9;
-  const dist = Array.from({ length: N + 1 }, () => Array(N + 1).fill(INF));
-  for (let i = 1; i < dist.length; i++) {
-    dist[i][i] = 0;
-  }
-  for (let [x, y, cost] of road) {
-    dist[x][y] = Math.min(cost, dist[x][y]);
-    dist[y][x] = Math.min(cost, dist[y][x]);
-  }
+function solution(n, m) {
+  const answer = [];
+  const part = [];
+  const ch = Array(n + 1).fill(0);
 
-  for (let k = 1; k <= N; k++) {
-    for (let a = 1; a <= N; a++) {
-      for (let b = 1; b <= N; b++) {
-        dist[a][b] = Math.min(dist[a][b], dist[a][k] + dist[k][b]);
+  function DFS(L, s) {
+    if (L === m) answer.push([...part]);
+    else {
+      for (let i = s; i <= n; i++) {
+        if (ch[i] === 0) {
+          ch[i] = 1;
+          part.push(i);
+          DFS(L + 1, i);
+          part.pop();
+          ch[i] = 0;
+        }
       }
     }
   }
-  console.log(dist[1]);
-  return dist[1].filter(el => el <= h).length;
+  DFS(0, 1);
+  return answer;
 }
 
-console.log(
-  solution(
-    6,
-    [
-      [1, 2, 1],
-      [1, 3, 2],
-      [2, 3, 2],
-      [3, 4, 3],
-      [3, 5, 2],
-      [3, 5, 3],
-      [5, 6, 1],
-    ],
-    4
-  )
-);
+console.log(solution(3, 2));
