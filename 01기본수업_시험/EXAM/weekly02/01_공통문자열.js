@@ -16,19 +16,36 @@ long
  */
 
 function solution(strs) {
-  let answer = '';
-  let len = Number.MAX_SAFE_INTEGER;
-  strs.forEach(x => {
-    len = Math.min(len, x.length);
-  });
-  for (let i = 0; i < len; i++) {
-    let s = new Set();
-    strs.forEach(x => {
-      s.add(x[i]);
-    });
-    if (s.size === 1) answer += strs[0][i];
+  strs.sort((a, b) => a.length - b.length);
+
+  for (let i = 0; i < strs[0].length; i++) {
+    const letters = new Set();
+    letters.add(strs[0][i]);
+    for (let j = 1; j < strs.length; j++) {
+      letters.add(strs[j][i]);
+      if (letters.size !== 1) {
+        console.log(i, strs[0][i]);
+        return strs[0].slice(0, i);
+      }
+    }
   }
-  return answer;
+  return strs[0];
 }
+
+// function solution(strs) {
+//   let answer = '';
+//   let len = Number.MAX_SAFE_INTEGER;
+//   strs.forEach(x => {
+//     len = Math.min(len, x.length);
+//   });
+//   for (let i = 0; i < len; i++) {
+//     let s = new Set();
+//     strs.forEach(x => {
+//       s.add(x[i]);
+//     });
+//     if (s.size === 1) answer += strs[0][i];
+//   }
+//   return answer;
+// }
 
 console.log(solution(['long', 'longtime', 'longest']));

@@ -15,3 +15,4 @@ function solution(str1, str2) {
 }
 
 console.log(solution('aba', 'bbad'));
+console.log(solution('aba', 'aab'));

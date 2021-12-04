@@ -14,4 +14,5 @@ function solution(nums) {
   return height;
 }
 
-console.log(solution([5, 2, 4, 7, 7, 3, 9, 10, 11]));
+console.log(solution([5, 2, 4, 7, 7, 3, 9, 10, 11])); // 8
+console.log(solution([8, 12, 2, 3, 7, 6, 20, 3])); // 14

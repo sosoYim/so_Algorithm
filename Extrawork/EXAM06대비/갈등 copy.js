@@ -1,26 +1,26 @@
 function solution(n, relations) {
   let result = 0;
-  const graph = Array.from({ length: 8 + 1 }, () => Array(8 + 1).fill(0));
-  for (let x of relations) {
-    const [one, two] = x.split(' ').map(v => parseInt(v));
-    graph[one][two] = 1;
-    graph[two][one] = 1;
-  }
-
+  const dislike = Array.from({ length: 9 }, () => Array(9).fill(0));
   const ch = Array(9).fill(0);
+
   const part = [0];
+  for (let x of relations) {
+    const [i, j] = x.split(' ');
+    dislike[+i][+j] = 1;
+    dislike[+j][+i] = 1;
+  }
 
   function DFS(L) {
     if (L === 9) {
       result += 1;
     } else {
-      for (let i = 1; i < 9; i++) {
+      for (let i = 1; i <= 8; i++) {
         if (ch[i] === 0) {
-          // console.log(part[part.length - 1]);
-          // if (part.length > 0 && graph[part[part.length - 1]][i] === 1) return;
           ch[i] = 1;
           part.push(i);
-          if (graph[part[L - 1]][part[L]] === 0) DFS(L + 1);
+          if (dislike[part[L - 1]][part[L]] === 0) {
+            DFS(L + 1);
+          }
           part.pop();
           ch[i] = 0;
         }
@@ -28,7 +28,7 @@ function solution(n, relations) {
     }
   }
   DFS(1);
-
+  // console.log(graph);
   return result;
 }
 

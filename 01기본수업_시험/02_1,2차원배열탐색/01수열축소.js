@@ -12,4 +12,4 @@ function solution(nums, m) {
   return nums;
 }
 // console.log(solution([5, 3, 7, 9, -2], 1));
-console.log(solution([5, 3, 7, 9, -2], 2));
+console.log(solution([5, 3, 7, 9, -2], 2)); // [6, -2,-13]

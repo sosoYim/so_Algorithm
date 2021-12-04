@@ -7,9 +7,14 @@ Algorithm everyday
 > 1st mission 기본 수업 하루 한 시간(1일치) 풀기
 
 - (21-11-14) DFS_BFS 부분집합, 바둑이, 순열, 중복순열, 조합, 섬나라 아일랜드, 토마토 (90분)
-- (21-11-15) DFS_BFS 부분집합, 조합, 플로이드와샬, 공장
-- (21-11-20) DFS_BFS 부분집합, 조합, 순열
+- (21-11-15) DFS_BFS : 부분집합, 조합, 플로이드와샬, 공장
+- (21-11-20) DFS_BFS : 부분집합, 조합, 순열
 - (21-11-22) 01_07아나그램, 02_01수열축소, 02_02가장높은증가수열
+- (21-11-23) 투포인터 : 01,02, 인프런:5-1,2
+- (21-11-24) 투포인터 인프런: 5-3,4,5,6,7,8, 코테5회 복습, 수업 DFS 복습(06-1,06-2일차)
+- (21-11-25) 수업 DFS 복습(06-1,06-2일차)
+- (21-11-29) 수업 문자열 복습
+- (21-11-30) weekly 복습(03-01, 02-01)
 
 ## 기초 업그레이드
 
@@ -18,7 +23,15 @@ Algorithm everyday
 - (21-11-14) 공장(exam4-4)
 - (21-11-15) 무지 먹방(fail), 합승택시(fail)
 - (21-11-21) IPAddress(pass)
-- (21-11-22) Leetcode 41,78,136,739,347,39
+- (21-11-22) Leetcode 41,78,136,739,347,39, 40
+- (21-11-23) Leetcode 238, 215, 169
+- (21-11-25) Leetcode 448,
+- (21-11-26) Leetcode 763,
+- (21-11-29) Leetcode 438, (기본 문제 유형과 유사)
+- (21-11-30) Leetcode 1658, 748
+- (21-12-01) 프로그래머스 [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883),Leetcode 739
+- (21-12-03) Leetcode 845 (바이토닉)
+- (21-12-04) Leetcode 1671 (바이토닉 응용)
 
 ## 시험 대비
 
@@ -68,6 +81,7 @@ Algorithm everyday
 - [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) (21/10/28 easy인데 어려움)
 - [kko3차 n진수 게임]()
+- [719. Smallest distance pair](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
 
 - 꼭 풀어보기(2021/11/11 문제풀이 강의)
 - [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)
