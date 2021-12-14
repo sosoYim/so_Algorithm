@@ -1,18 +1,18 @@
 // 진행 중!
 
-function solution(nums,m){
-    let answer=0;
-    for(let i=nums.length-1; i>0; i--){
-        if(m===0) break;
-        if(nums[i]<m){
-            answer += parseInt(m/nums[i]);
-            m -= (m%nums[i]);
-        }
+function solution(nums, m) {
+  let answer = 0;
+  for (let i = nums.length - 1; i > 0; i--) {
+    if (m === 0) break;
+    if (nums[i] < m) {
+      answer += parseInt(m / nums[i]);
+      m -= m % nums[i];
     }
-    return answer;
+  }
+  return answer;
 }
 
-console.log(solution([1,5,10],15));
+console.log(solution([1, 5, 10], 15));
 console.log('b'.charCodeAt(0));
 
 /*

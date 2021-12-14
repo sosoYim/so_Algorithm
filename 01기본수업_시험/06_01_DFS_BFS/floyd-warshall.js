@@ -20,7 +20,7 @@ function floydWarchall(N, road, h) {
   //3. 모든 노드에서 모든 노드까지의 최소거리
   // k를 거치는 모든 노드
   // a에서 출발해
-  // b까지 가는...???
+  // b까지 가는
   for (let k = 1; k < N + 1; k++) {
     // console.log(graph);
     // console.log(`${k} k START`);

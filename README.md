@@ -2,6 +2,8 @@
 
 Algorithm everyday
 
+> 21-12월부터 노션 정리 중
+
 ## 기초 뽀개기
 
 > 1st mission 기본 수업 하루 한 시간(1일치) 풀기
@@ -32,6 +34,8 @@ Algorithm everyday
 - (21-12-01) 프로그래머스 [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883),Leetcode 739
 - (21-12-03) Leetcode 845 (바이토닉)
 - (21-12-04) Leetcode 1671 (바이토닉 응용)
+- (21-12-05) Leeetcode 395, 413
+- (21-12-06) Leetcode 424, 395
 
 ## 시험 대비
 
