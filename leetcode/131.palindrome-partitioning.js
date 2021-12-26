@@ -56,6 +56,7 @@ function isPalindrome(str) {
 
 var partition = function (s) {
   const result = [];
+
   function DFS(s, arr) {
     if (s.length === 0) result.push([...arr]);
     else {
@@ -65,6 +66,7 @@ var partition = function (s) {
       }
     }
   }
+
   DFS(s, []);
   return result;
 };
