@@ -33,8 +33,6 @@ var alertNames = function (keyName, keyTime) {
         answer.push(name);
         break;
       }
-      // console.log('처리 후 lt,rt', lt, rt);
-      // console.log('처리 후 cnt', cnt);
     }
   }
 

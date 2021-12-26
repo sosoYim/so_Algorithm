@@ -45,6 +45,7 @@
 function isPalindrome(str) {
   let left = 0,
     right = str.length - 1;
+
   while (left < right) {
     if (str[left] !== str[right]) return false;
     left++;
@@ -55,22 +56,15 @@ function isPalindrome(str) {
 
 var partition = function (s) {
   const result = [];
-
-  // 시작 문자열 : slice(0,i) i = 1~str.length
-  function DFS(str, parts) {
-    const len = str.length;
-    if (len === 0 && parts.length) result.push([...parts]);
-    for (let i = 1; i <= len; i++) {
-      const part = str.slice(0, i);
-      // console.log({ i, part, rest: str.slice(i), parts });
-      if (isPalindrome(part)) {
-        parts.push(part);
-        DFS(str.slice(i), parts);
-        parts.pop();
+  function DFS(s, arr) {
+    if (s.length === 0) result.push([...arr]);
+    else {
+      for (let i = 1; i <= s.length; i++) {
+        const check = s.substr(0, i);
+        if (isPalindrome(check)) DFS(s.substr(i), [...arr, check]);
       }
     }
   }
-
   DFS(s, []);
   return result;
 };
